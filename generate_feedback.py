@@ -9,7 +9,7 @@ from pathlib import Path
 import segno
 
 SCRIPT_DIR = Path(__file__).parent
-SUMMARY_PAGE_SIZE = 26
+SUMMARY_PAGE_SIZE = 20
 
 # Height estimates (mm) for A4 pagination of team sheets
 PAGE_CONTENT_H = 260  # usable height inside a page (A4 minus top/bottom padding & footer)
@@ -313,7 +313,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
 /* --- Summary table --- */
 .summary-table { width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 4mm; }
 .summary-table thead { background: #f0f0f0; }
-.summary-table th, .summary-table td { border: 0.5pt solid #bbb; padding: 2mm 3mm; text-align: center; }
+.summary-table th, .summary-table td { border: 0.5pt solid #bbb; padding: 1.5mm 1.5mm; text-align: center; }
 .sum-team { text-align: left; font-weight: 700; }
 .sum-team-val { text-align: left; font-weight: 700; font-size: 10pt; }
 .sum-award { font-size: 10pt; font-weight: 700; border-bottom: 1.5pt solid #888; }
