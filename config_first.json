@@ -5,46 +5,46 @@
   "qr_label": "Full criteria\non gm0.org",
   "awards": {
     "Think": [
-      { "name": "Portfolio with engineering content", "required": true },
-      { "name": "Team resources and development plan", "required": false },
-      { "name": "Organized and clear presentation", "required": false }
+      { "name": "Portfolio with engineering content", "required": true, "slug": "Th1" },
+      { "name": "Team resources and development plan", "required": false, "slug": "Th2" },
+      { "name": "Organized and clear presentation", "required": false, "slug": "Th3" }
     ],
     "Connect": [
-      { "name": "Team plan for skill development", "required": true },
-      { "name": "STEM community connections", "required": false },
-      { "name": "Active engineering community engagement", "required": false }
+      { "name": "Team plan for skill development", "required": true, "slug": "Cn1" },
+      { "name": "STEM community connections", "required": false, "slug": "Cn2" },
+      { "name": "Active engineering community engagement", "required": false, "slug": "Cn3" }
     ],
     "Reach": [
-      { "name": "Outreach objectives supporting FIRST", "required": true },
-      { "name": "Recruitment of new teams/coaches/mentors", "required": true },
-      { "name": "Ambassador for FIRST programs", "required": false },
-      { "name": "Creative outreach materials", "required": false }
+      { "name": "Outreach objectives supporting FIRST", "required": true, "slug": "R1" },
+      { "name": "Recruitment of new teams/coaches/mentors", "required": true, "slug": "R2" },
+      { "name": "Ambassador for FIRST programs", "required": false, "slug": "R3" },
+      { "name": "Creative outreach materials", "required": false, "slug": "R4" }
     ],
     "Sustain": [
-      { "name": "Sustainability and planning", "required": true },
-      { "name": "Progress tracking towards plans", "required": true },
-      { "name": "Clear team roles and leadership", "required": false },
-      { "name": "Constraint and risk management", "required": false }
+      { "name": "Sustainability and planning", "required": true, "slug": "S1" },
+      { "name": "Progress tracking towards plans", "required": true, "slug": "S2" },
+      { "name": "Clear team roles and leadership", "required": false, "slug": "S3" },
+      { "name": "Constraint and risk management", "required": false, "slug": "S4" }
     ],
     "Innovate": [
-      { "name": "Engineering content for design solution", "required": true },
-      { "name": "Creative/unique robot or mechanism", "required": true },
-      { "name": "Stable, robust, contributes to objectives", "required": true },
-      { "name": "Risk mitigation", "required": false }
+      { "name": "Engineering content for design solution", "required": true, "slug": "I1" },
+      { "name": "Creative/unique robot or mechanism", "required": true, "slug": "I2" },
+      { "name": "Stable, robust, contributes to objectives", "required": true, "slug": "I3" },
+      { "name": "Risk mitigation", "required": false, "slug": "I4" }
     ],
     "Control": [
-      { "name": "Portfolio with control components", "required": true },
-      { "name": "External feedback and control solutions", "required": true },
-      { "name": "Consistent performance during matches", "required": false },
-      { "name": "Reliability and improvement discussion", "required": false },
-      { "name": "Engineering process for control solutions", "required": false }
+      { "name": "Portfolio with control components", "required": true, "slug": "C1" },
+      { "name": "External feedback and control solutions", "required": true, "slug": "C2" },
+      { "name": "Consistent performance during matches", "required": false, "slug": "C3" },
+      { "name": "Reliability and improvement discussion", "required": false, "slug": "C4" },
+      { "name": "Engineering process for control solutions", "required": false, "slug": "C5" }
     ],
     "Design": [
-      { "name": "Elegant, efficient, and maintainable", "required": true },
-      { "name": "Entire machine design worthy of recognition", "required": true },
-      { "name": "Distinguished by aesthetics and function", "required": false },
-      { "name": "Well-considered design basis", "required": false },
-      { "name": "Effective and consistent with game plan", "required": false }
+      { "name": "Elegant, efficient, and maintainable", "required": true, "slug": "D1" },
+      { "name": "Entire machine design worthy of recognition", "required": true, "slug": "D2" },
+      { "name": "Distinguished by aesthetics and function", "required": false, "slug": "D3" },
+      { "name": "Well-considered design basis", "required": false, "slug": "D4" },
+      { "name": "Effective and consistent with game plan", "required": false, "slug": "D5" }
     ]
   }
 }

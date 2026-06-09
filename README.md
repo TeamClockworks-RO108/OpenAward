@@ -41,13 +41,13 @@ python generate_feedback.py config.json scoring_sheet.csv
   "qr_label": "Scan for full\ncriteria descriptions",
   "awards": {
     "Control": [
-      { "name": "Software overview", "required": true },
-      { "name": "Sensor input", "required": true },
-      { "name": "Advanced algorithms", "required": false }
+      { "name": "Software overview", "required": true, "slug": "C1" },
+      { "name": "Sensor input", "required": true, "slug": "C2" },
+      { "name": "Advanced algorithms", "required": false, "slug": "C3" }
     ],
     "Design": [
-      { "name": "Elegance and efficiency", "required": true },
-      { "name": "Aesthetic identity", "required": false }
+      { "name": "Elegance and efficiency", "required": true, "slug": "D1" },
+      { "name": "Aesthetic identity", "required": false, "slug": "D2" }
     ]
   }
 }
@@ -62,18 +62,19 @@ python generate_feedback.py config.json scoring_sheet.csv
 | `awards` | Ordered dict of award names to arrays of criteria |
 | `awards.*.name` | Criterion display name |
 | `awards.*.required` | `true` for required criteria (black badge), `false` for encouraged (outline badge) |
+| `awards.*.slug` | CSV column name for this criterion's score (e.g. `C1`, `D3`, `I2`) |
 
 ### Scoring CSV
 
 The CSV must have columns `Team`, `C1` through `CN` (one per criterion across all awards, in order), and optionally `Notes`:
 
 ```csv
-Team,C1,C2,C3,C4,C5,Notes
+Team,C1,C2,C3,D1,D2,Notes
 15989,4,2.5,4.5,3,4.5,
 21087,5,4.5,5,5,4,Strong overall
 ```
 
-Criteria columns map left-to-right through the awards in config order. For a config with Control (5 criteria) and Design (6 criteria), columns C1-C5 are Control and C6-C11 are Design.
+Each column name must match a `slug` defined in the config. The ordering of columns in the CSV does not matter — scores are mapped by slug, not by position.
 
 ## Features
 

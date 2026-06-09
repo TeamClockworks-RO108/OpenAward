@@ -346,15 +346,7 @@ def main():
 
     config = load_config(config_path)
 
-    # Build column ranges for each award: award -> (start_col, count)
-    award_ranges = {}
-    col = 1  # C1-based
-    for award_name, criteria in config["awards"].items():
-        count = len(criteria)
-        award_ranges[award_name] = (col, count)
-        col += count
-
-    # Read CSV and split scores per award
+    # Read CSV and split scores per award using each criterion's slug
     qr_svg = make_qr_svg(config["qr_url"])
     teams = []
 
@@ -366,9 +358,9 @@ def main():
             team = row["Team"]
             notes = row.get("Notes", "").strip()
             scores_by_award = {}
-            for award_name, (start, count) in award_ranges.items():
+            for award_name, criteria in config["awards"].items():
                 scores_by_award[award_name] = [
-                    float(row[f"C{start + i}"]) for i in range(count)
+                    float(row[crit["slug"]]) for crit in criteria
                 ]
             teams.append((team, scores_by_award, notes))
 

@@ -5,28 +5,28 @@
   "qr_label": "Scan for full\ncriteria descriptions",
   "awards": {
     "Control": [
-      { "name": "Software overview", "required": true },
-      { "name": "Sensor input", "required": true },
-      { "name": "Clear control techniques", "required": true },
-      { "name": "Advanced algorithms", "required": false },
-      { "name": "Robustness", "required": false }
+      { "name": "Software overview", "required": true, "slug": "C1" },
+      { "name": "Sensor input", "required": true, "slug": "C2" },
+      { "name": "Clear control techniques", "required": true, "slug": "C3" },
+      { "name": "Advanced algorithms", "required": false, "slug": "C4" },
+      { "name": "Robustness", "required": false, "slug": "C5" }
     ],
     "Design": [
-      { "name": "Elegance, efficiency, and maintainability", "required": true },
-      { "name": "Intentional design process", "required": true },
-      { "name": "Clear design principles", "required": true },
-      { "name": "Trade-off awareness", "required": true },
-      { "name": "Considered inspiration", "required": false },
-      { "name": "Aesthetic identity", "required": false }
+      { "name": "Elegance, efficiency, and maintainability", "required": true, "slug": "D1" },
+      { "name": "Intentional design process", "required": true, "slug": "D2" },
+      { "name": "Clear design principles", "required": true, "slug": "D3" },
+      { "name": "Trade-off awareness", "required": true, "slug": "D4" },
+      { "name": "Considered inspiration", "required": false, "slug": "D5" },
+      { "name": "Aesthetic identity", "required": false, "slug": "D6" }
     ],
     "Innovate": [
-      { "name": "Clear innovation identified", "required": true },
-      { "name": "Documented process", "required": true },
-      { "name": "Measurable impact", "required": true },
-      { "name": "Problem-first thinking", "required": false },
-      { "name": "Iteration evidence", "required": false },
-      { "name": "Considered trade-offs", "required": false },
-      { "name": "Transferability", "required": false }
+      { "name": "Clear innovation identified", "required": true, "slug": "I1" },
+      { "name": "Documented process", "required": true, "slug": "I2" },
+      { "name": "Measurable impact", "required": true, "slug": "I3" },
+      { "name": "Problem-first thinking", "required": false, "slug": "I4" },
+      { "name": "Iteration evidence", "required": false, "slug": "I5" },
+      { "name": "Considered trade-offs", "required": false, "slug": "I6" },
+      { "name": "Transferability", "required": false, "slug": "I7" }
     ]
   }
 }
