@@ -49,6 +49,10 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
 .badge.required { background: #111; color: #fff; }
 .badge.encouraged { background: #fff; color: #333; border: 1pt solid #888; }
 
+/* Podium highlights (top 3 per award) */
+.podium { background: #111; color: #fff; font-weight: 700; }
+.podium-badge { background: #111; color: #fff; font-size: 8pt; padding: 0.5mm 2.5mm; border-radius: 2px; margin-left: 2mm; vertical-align: middle; font-weight: 700; }
+
 .notes { margin: 4mm 0; padding: 3mm 4mm; background: #f5f5f5; border-left: 3pt solid #333; font-size: 9.5pt; color: #222; }
 
 .footer { position: absolute; bottom: 8mm; left: 0; width: 100%; text-align: center; font-size: 8pt; color: #999; }
@@ -70,7 +74,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
   .page { box-shadow: none; margin: 0; }
   @page { size: A4; margin: 0; }
   .bar-fill, .cat-header, .badge, .bar-bg, .summary-table thead,
-  .summary-table tbody tr:nth-child(even) {
+  .summary-table tbody tr:nth-child(even), .podium, .podium-badge {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -94,32 +98,32 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
           <tr><th class="sum-stat">Avg</th><th class="sum-stat">StdDev</th><th class="sum-stat">Avg</th><th class="sum-stat">StdDev</th><th class="sum-stat">Avg</th><th class="sum-stat">StdDev</th><th class="sum-stat">Avg</th><th class="sum-stat">StdDev</th><th class="sum-stat">Avg</th><th class="sum-stat">StdDev</th><th class="sum-stat">Avg</th><th class="sum-stat">StdDev</th><th class="sum-stat">Avg</th><th class="sum-stat">StdDev</th></tr>
         </thead>
         <tbody>
-          <tr><td class="sum-team-val">11359</td><td class="sum-val">1.2</td><td class="sum-val">1.0</td><td class="sum-val">2.8</td><td class="sum-val">2.0</td><td class="sum-val">3.8</td><td class="sum-val">1.2</td><td class="sum-val">2.1</td><td class="sum-val">1.7</td><td class="sum-val">4.1</td><td class="sum-val">0.9</td><td class="sum-val">2.0</td><td class="sum-val">1.9</td><td class="sum-val">0.9</td><td class="sum-val">0.8</td><td class="sum-notes-val"></td></tr>
+          <tr><td class="sum-team-val">11359</td><td class="sum-val">1.2</td><td class="sum-val">1.0</td><td class="sum-val">2.8</td><td class="sum-val">2.0</td><td class="sum-val podium">3.8 (1)</td><td class="sum-val">1.2</td><td class="sum-val">2.1</td><td class="sum-val">1.7</td><td class="sum-val podium">4.1 (1)</td><td class="sum-val">0.9</td><td class="sum-val">2.0</td><td class="sum-val">1.9</td><td class="sum-val">0.9</td><td class="sum-val">0.8</td><td class="sum-notes-val"></td></tr>
 <tr><td class="sum-team-val">11418</td><td class="sum-val">2.3</td><td class="sum-val">2.0</td><td class="sum-val">3.3</td><td class="sum-val">1.5</td><td class="sum-val">2.9</td><td class="sum-val">1.8</td><td class="sum-val">2.5</td><td class="sum-val">1.4</td><td class="sum-val">2.5</td><td class="sum-val">2.0</td><td class="sum-val">2.7</td><td class="sum-val">2.0</td><td class="sum-val">2.2</td><td class="sum-val">1.4</td><td class="sum-notes-val"></td></tr>
 <tr><td class="sum-team-val">11438</td><td class="sum-val">1.0</td><td class="sum-val">0.5</td><td class="sum-val">1.3</td><td class="sum-val">1.5</td><td class="sum-val">2.5</td><td class="sum-val">1.0</td><td class="sum-val">2.9</td><td class="sum-val">2.0</td><td class="sum-val">2.2</td><td class="sum-val">0.9</td><td class="sum-val">3.3</td><td class="sum-val">1.1</td><td class="sum-val">2.2</td><td class="sum-val">1.4</td><td class="sum-notes-val"></td></tr>
 <tr><td class="sum-team-val">11471</td><td class="sum-val">3.7</td><td class="sum-val">1.4</td><td class="sum-val">1.8</td><td class="sum-val">1.5</td><td class="sum-val">2.2</td><td class="sum-val">1.7</td><td class="sum-val">3.1</td><td class="sum-val">1.7</td><td class="sum-val">2.8</td><td class="sum-val">1.6</td><td class="sum-val">2.0</td><td class="sum-val">1.2</td><td class="sum-val">2.5</td><td class="sum-val">2.0</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">12183</td><td class="sum-val">2.5</td><td class="sum-val">1.3</td><td class="sum-val">3.2</td><td class="sum-val">1.0</td><td class="sum-val">2.6</td><td class="sum-val">1.9</td><td class="sum-val">3.2</td><td class="sum-val">1.8</td><td class="sum-val">4.0</td><td class="sum-val">1.1</td><td class="sum-val">2.8</td><td class="sum-val">1.2</td><td class="sum-val">3.2</td><td class="sum-val">1.0</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">12183</td><td class="sum-val">2.5</td><td class="sum-val">1.3</td><td class="sum-val">3.2</td><td class="sum-val">1.0</td><td class="sum-val">2.6</td><td class="sum-val">1.9</td><td class="sum-val">3.2</td><td class="sum-val">1.8</td><td class="sum-val podium">4.0 (2)</td><td class="sum-val">1.1</td><td class="sum-val">2.8</td><td class="sum-val">1.2</td><td class="sum-val podium">3.2 (2)</td><td class="sum-val">1.0</td><td class="sum-notes-val"></td></tr>
 <tr><td class="sum-team-val">12494</td><td class="sum-val">1.5</td><td class="sum-val">2.2</td><td class="sum-val">2.3</td><td class="sum-val">2.4</td><td class="sum-val">2.6</td><td class="sum-val">1.1</td><td class="sum-val">2.8</td><td class="sum-val">1.8</td><td class="sum-val">3.0</td><td class="sum-val">1.7</td><td class="sum-val">3.3</td><td class="sum-val">0.9</td><td class="sum-val">2.6</td><td class="sum-val">1.2</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">12929</td><td class="sum-val">3.7</td><td class="sum-val">1.0</td><td class="sum-val">3.8</td><td class="sum-val">1.2</td><td class="sum-val">1.2</td><td class="sum-val">0.9</td><td class="sum-val">1.4</td><td class="sum-val">1.0</td><td class="sum-val">3.0</td><td class="sum-val">0.4</td><td class="sum-val">1.8</td><td class="sum-val">1.3</td><td class="sum-val">1.5</td><td class="sum-val">1.5</td><td class="sum-notes-val">No portfolio</td></tr>
+<tr><td class="sum-team-val">12929</td><td class="sum-val">3.7</td><td class="sum-val">1.0</td><td class="sum-val podium">3.8 (3)</td><td class="sum-val">1.2</td><td class="sum-val">1.2</td><td class="sum-val">0.9</td><td class="sum-val">1.4</td><td class="sum-val">1.0</td><td class="sum-val">3.0</td><td class="sum-val">0.4</td><td class="sum-val">1.8</td><td class="sum-val">1.3</td><td class="sum-val">1.5</td><td class="sum-val">1.5</td><td class="sum-notes-val">No portfolio</td></tr>
 <tr><td class="sum-team-val">12932</td><td class="sum-val">1.8</td><td class="sum-val">1.9</td><td class="sum-val">1.7</td><td class="sum-val">0.8</td><td class="sum-val">3.1</td><td class="sum-val">1.8</td><td class="sum-val">2.6</td><td class="sum-val">1.7</td><td class="sum-val">1.2</td><td class="sum-val">1.5</td><td class="sum-val">1.8</td><td class="sum-val">1.0</td><td class="sum-val">2.8</td><td class="sum-val">1.8</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">13268</td><td class="sum-val">3.5</td><td class="sum-val">1.3</td><td class="sum-val">1.8</td><td class="sum-val">1.5</td><td class="sum-val">2.8</td><td class="sum-val">1.4</td><td class="sum-val">4.4</td><td class="sum-val">0.5</td><td class="sum-val">3.5</td><td class="sum-val">0.7</td><td class="sum-val">2.6</td><td class="sum-val">1.8</td><td class="sum-val">2.4</td><td class="sum-val">1.7</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">13278</td><td class="sum-val">4.3</td><td class="sum-val">0.3</td><td class="sum-val">1.3</td><td class="sum-val">0.8</td><td class="sum-val">1.8</td><td class="sum-val">1.0</td><td class="sum-val">1.8</td><td class="sum-val">1.7</td><td class="sum-val">3.2</td><td class="sum-val">0.6</td><td class="sum-val">2.1</td><td class="sum-val">1.6</td><td class="sum-val">2.8</td><td class="sum-val">1.9</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">13483</td><td class="sum-val">2.0</td><td class="sum-val">1.0</td><td class="sum-val">1.3</td><td class="sum-val">1.5</td><td class="sum-val">3.0</td><td class="sum-val">2.0</td><td class="sum-val">1.6</td><td class="sum-val">1.2</td><td class="sum-val">3.8</td><td class="sum-val">1.2</td><td class="sum-val">2.0</td><td class="sum-val">1.7</td><td class="sum-val">1.6</td><td class="sum-val">1.1</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">13268</td><td class="sum-val">3.5</td><td class="sum-val">1.3</td><td class="sum-val">1.8</td><td class="sum-val">1.5</td><td class="sum-val">2.8</td><td class="sum-val">1.4</td><td class="sum-val podium">4.4 (1)</td><td class="sum-val">0.5</td><td class="sum-val">3.5</td><td class="sum-val">0.7</td><td class="sum-val">2.6</td><td class="sum-val">1.8</td><td class="sum-val">2.4</td><td class="sum-val">1.7</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">13278</td><td class="sum-val podium">4.3 (1)</td><td class="sum-val">0.3</td><td class="sum-val">1.3</td><td class="sum-val">0.8</td><td class="sum-val">1.8</td><td class="sum-val">1.0</td><td class="sum-val">1.8</td><td class="sum-val">1.7</td><td class="sum-val">3.2</td><td class="sum-val">0.6</td><td class="sum-val">2.1</td><td class="sum-val">1.6</td><td class="sum-val">2.8</td><td class="sum-val">1.9</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">13483</td><td class="sum-val">2.0</td><td class="sum-val">1.0</td><td class="sum-val">1.3</td><td class="sum-val">1.5</td><td class="sum-val">3.0</td><td class="sum-val">2.0</td><td class="sum-val">1.6</td><td class="sum-val">1.2</td><td class="sum-val podium">3.8 (3)</td><td class="sum-val">1.2</td><td class="sum-val">2.0</td><td class="sum-val">1.7</td><td class="sum-val">1.6</td><td class="sum-val">1.1</td><td class="sum-notes-val"></td></tr>
 <tr><td class="sum-team-val">13550</td><td class="sum-val">2.3</td><td class="sum-val">1.5</td><td class="sum-val">1.7</td><td class="sum-val">1.6</td><td class="sum-val">3.1</td><td class="sum-val">1.1</td><td class="sum-val">2.6</td><td class="sum-val">1.4</td><td class="sum-val">2.6</td><td class="sum-val">0.6</td><td class="sum-val">1.7</td><td class="sum-val">1.4</td><td class="sum-val">1.1</td><td class="sum-val">1.7</td><td class="sum-notes-val"></td></tr>
 <tr><td class="sum-team-val">13772</td><td class="sum-val">3.0</td><td class="sum-val">1.8</td><td class="sum-val">2.0</td><td class="sum-val">1.8</td><td class="sum-val">1.5</td><td class="sum-val">0.6</td><td class="sum-val">1.9</td><td class="sum-val">1.4</td><td class="sum-val">2.0</td><td class="sum-val">2.1</td><td class="sum-val">2.9</td><td class="sum-val">2.2</td><td class="sum-val">0.8</td><td class="sum-val">0.6</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">14070</td><td class="sum-val">1.5</td><td class="sum-val">2.2</td><td class="sum-val">2.0</td><td class="sum-val">1.5</td><td class="sum-val">3.4</td><td class="sum-val">1.6</td><td class="sum-val">3.4</td><td class="sum-val">1.3</td><td class="sum-val">2.8</td><td class="sum-val">1.8</td><td class="sum-val">2.1</td><td class="sum-val">1.6</td><td class="sum-val">1.7</td><td class="sum-val">1.3</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">14114</td><td class="sum-val">1.5</td><td class="sum-val">2.2</td><td class="sum-val">3.7</td><td class="sum-val">1.0</td><td class="sum-val">3.1</td><td class="sum-val">1.0</td><td class="sum-val">3.4</td><td class="sum-val">1.7</td><td class="sum-val">2.6</td><td class="sum-val">1.5</td><td class="sum-val">2.6</td><td class="sum-val">1.0</td><td class="sum-val">1.0</td><td class="sum-val">0.9</td><td class="sum-notes-val">Veteran team</td></tr>
-<tr><td class="sum-team-val">15183</td><td class="sum-val">2.3</td><td class="sum-val">2.1</td><td class="sum-val">3.2</td><td class="sum-val">2.0</td><td class="sum-val">2.0</td><td class="sum-val">1.9</td><td class="sum-val">4.1</td><td class="sum-val">0.6</td><td class="sum-val">3.0</td><td class="sum-val">1.7</td><td class="sum-val">1.6</td><td class="sum-val">0.7</td><td class="sum-val">2.3</td><td class="sum-val">1.9</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">14070</td><td class="sum-val">1.5</td><td class="sum-val">2.2</td><td class="sum-val">2.0</td><td class="sum-val">1.5</td><td class="sum-val podium">3.4 (2)</td><td class="sum-val">1.6</td><td class="sum-val podium">3.4 (3)</td><td class="sum-val">1.3</td><td class="sum-val">2.8</td><td class="sum-val">1.8</td><td class="sum-val">2.1</td><td class="sum-val">1.6</td><td class="sum-val">1.7</td><td class="sum-val">1.3</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">14114</td><td class="sum-val">1.5</td><td class="sum-val">2.2</td><td class="sum-val">3.7</td><td class="sum-val">1.0</td><td class="sum-val">3.1</td><td class="sum-val">1.0</td><td class="sum-val podium">3.4 (3)</td><td class="sum-val">1.7</td><td class="sum-val">2.6</td><td class="sum-val">1.5</td><td class="sum-val">2.6</td><td class="sum-val">1.0</td><td class="sum-val">1.0</td><td class="sum-val">0.9</td><td class="sum-notes-val">Veteran team</td></tr>
+<tr><td class="sum-team-val">15183</td><td class="sum-val">2.3</td><td class="sum-val">2.1</td><td class="sum-val">3.2</td><td class="sum-val">2.0</td><td class="sum-val">2.0</td><td class="sum-val">1.9</td><td class="sum-val podium">4.1 (2)</td><td class="sum-val">0.6</td><td class="sum-val">3.0</td><td class="sum-val">1.7</td><td class="sum-val">1.6</td><td class="sum-val">0.7</td><td class="sum-val">2.3</td><td class="sum-val">1.9</td><td class="sum-notes-val"></td></tr>
 <tr><td class="sum-team-val">15551</td><td class="sum-val">2.7</td><td class="sum-val">1.6</td><td class="sum-val">3.0</td><td class="sum-val">2.0</td><td class="sum-val">2.5</td><td class="sum-val">1.1</td><td class="sum-val">1.9</td><td class="sum-val">1.1</td><td class="sum-val">2.2</td><td class="sum-val">1.2</td><td class="sum-val">2.4</td><td class="sum-val">1.4</td><td class="sum-val">2.1</td><td class="sum-val">1.9</td><td class="sum-notes-val">No portfolio</td></tr>
 <tr><td class="sum-team-val">16127</td><td class="sum-val">1.7</td><td class="sum-val">2.5</td><td class="sum-val">0.8</td><td class="sum-val">0.3</td><td class="sum-val">1.9</td><td class="sum-val">1.5</td><td class="sum-val">2.2</td><td class="sum-val">1.2</td><td class="sum-val">2.6</td><td class="sum-val">1.7</td><td class="sum-val">2.7</td><td class="sum-val">1.5</td><td class="sum-val">2.8</td><td class="sum-val">1.3</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">16238</td><td class="sum-val">3.8</td><td class="sum-val">0.8</td><td class="sum-val">3.8</td><td class="sum-val">1.0</td><td class="sum-val">3.4</td><td class="sum-val">0.5</td><td class="sum-val">1.8</td><td class="sum-val">1.3</td><td class="sum-val">2.0</td><td class="sum-val">2.3</td><td class="sum-val">2.9</td><td class="sum-val">1.7</td><td class="sum-val">2.7</td><td class="sum-val">1.1</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">16276</td><td class="sum-val">2.0</td><td class="sum-val">1.7</td><td class="sum-val">2.3</td><td class="sum-val">0.3</td><td class="sum-val">2.8</td><td class="sum-val">1.0</td><td class="sum-val">1.5</td><td class="sum-val">1.7</td><td class="sum-val">1.0</td><td class="sum-val">0.9</td><td class="sum-val">3.8</td><td class="sum-val">1.1</td><td class="sum-val">3.0</td><td class="sum-val">1.9</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">16358</td><td class="sum-val">4.2</td><td class="sum-val">0.8</td><td class="sum-val">3.2</td><td class="sum-val">1.2</td><td class="sum-val">1.8</td><td class="sum-val">1.0</td><td class="sum-val">2.4</td><td class="sum-val">1.1</td><td class="sum-val">2.9</td><td class="sum-val">1.5</td><td class="sum-val">3.0</td><td class="sum-val">1.9</td><td class="sum-val">3.4</td><td class="sum-val">2.0</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">16618</td><td class="sum-val">2.2</td><td class="sum-val">2.0</td><td class="sum-val">1.5</td><td class="sum-val">1.8</td><td class="sum-val">1.5</td><td class="sum-val">1.2</td><td class="sum-val">2.4</td><td class="sum-val">1.6</td><td class="sum-val">1.4</td><td class="sum-val">1.1</td><td class="sum-val">3.0</td><td class="sum-val">1.8</td><td class="sum-val">3.2</td><td class="sum-val">1.0</td><td class="sum-notes-val">Veteran team</td></tr>
+<tr><td class="sum-team-val">16238</td><td class="sum-val">3.8</td><td class="sum-val">0.8</td><td class="sum-val podium">3.8 (3)</td><td class="sum-val">1.0</td><td class="sum-val podium">3.4 (2)</td><td class="sum-val">0.5</td><td class="sum-val">1.8</td><td class="sum-val">1.3</td><td class="sum-val">2.0</td><td class="sum-val">2.3</td><td class="sum-val">2.9</td><td class="sum-val">1.7</td><td class="sum-val">2.7</td><td class="sum-val">1.1</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">16276</td><td class="sum-val">2.0</td><td class="sum-val">1.7</td><td class="sum-val">2.3</td><td class="sum-val">0.3</td><td class="sum-val">2.8</td><td class="sum-val">1.0</td><td class="sum-val">1.5</td><td class="sum-val">1.7</td><td class="sum-val">1.0</td><td class="sum-val">0.9</td><td class="sum-val podium">3.8 (1)</td><td class="sum-val">1.1</td><td class="sum-val">3.0</td><td class="sum-val">1.9</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">16358</td><td class="sum-val podium">4.2 (3)</td><td class="sum-val">0.8</td><td class="sum-val">3.2</td><td class="sum-val">1.2</td><td class="sum-val">1.8</td><td class="sum-val">1.0</td><td class="sum-val">2.4</td><td class="sum-val">1.1</td><td class="sum-val">2.9</td><td class="sum-val">1.5</td><td class="sum-val">3.0</td><td class="sum-val">1.9</td><td class="sum-val podium">3.4 (1)</td><td class="sum-val">2.0</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">16618</td><td class="sum-val">2.2</td><td class="sum-val">2.0</td><td class="sum-val">1.5</td><td class="sum-val">1.8</td><td class="sum-val">1.5</td><td class="sum-val">1.2</td><td class="sum-val">2.4</td><td class="sum-val">1.6</td><td class="sum-val">1.4</td><td class="sum-val">1.1</td><td class="sum-val">3.0</td><td class="sum-val">1.8</td><td class="sum-val podium">3.2 (2)</td><td class="sum-val">1.0</td><td class="sum-notes-val">Veteran team</td></tr>
 <tr><td class="sum-team-val">16908</td><td class="sum-val">2.7</td><td class="sum-val">1.2</td><td class="sum-val">2.3</td><td class="sum-val">1.4</td><td class="sum-val">2.4</td><td class="sum-val">2.0</td><td class="sum-val">2.4</td><td class="sum-val">1.2</td><td class="sum-val">2.5</td><td class="sum-val">1.5</td><td class="sum-val">3.1</td><td class="sum-val">1.7</td><td class="sum-val">2.1</td><td class="sum-val">2.1</td><td class="sum-notes-val"></td></tr>
 <tr><td class="sum-team-val">17560</td><td class="sum-val">2.3</td><td class="sum-val">1.9</td><td class="sum-val">1.5</td><td class="sum-val">0.5</td><td class="sum-val">2.0</td><td class="sum-val">1.7</td><td class="sum-val">2.5</td><td class="sum-val">0.8</td><td class="sum-val">2.0</td><td class="sum-val">1.2</td><td class="sum-val">3.0</td><td class="sum-val">0.6</td><td class="sum-val">2.4</td><td class="sum-val">1.0</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">17684</td><td class="sum-val">1.0</td><td class="sum-val">0.5</td><td class="sum-val">1.7</td><td class="sum-val">1.2</td><td class="sum-val">2.2</td><td class="sum-val">1.9</td><td class="sum-val">2.8</td><td class="sum-val">1.8</td><td class="sum-val">2.2</td><td class="sum-val">2.0</td><td class="sum-val">3.6</td><td class="sum-val">1.4</td><td class="sum-val">3.0</td><td class="sum-val">1.6</td><td class="sum-notes-val">Veteran team</td></tr>
-<tr><td class="sum-team-val">18016</td><td class="sum-val">3.0</td><td class="sum-val">1.3</td><td class="sum-val">4.7</td><td class="sum-val">0.6</td><td class="sum-val">2.6</td><td class="sum-val">0.2</td><td class="sum-val">1.6</td><td class="sum-val">0.9</td><td class="sum-val">2.2</td><td class="sum-val">2.1</td><td class="sum-val">2.4</td><td class="sum-val">1.9</td><td class="sum-val">3.0</td><td class="sum-val">1.6</td><td class="sum-notes-val">Late check-in</td></tr>
+<tr><td class="sum-team-val">17684</td><td class="sum-val">1.0</td><td class="sum-val">0.5</td><td class="sum-val">1.7</td><td class="sum-val">1.2</td><td class="sum-val">2.2</td><td class="sum-val">1.9</td><td class="sum-val">2.8</td><td class="sum-val">1.8</td><td class="sum-val">2.2</td><td class="sum-val">2.0</td><td class="sum-val podium">3.6 (2)</td><td class="sum-val">1.4</td><td class="sum-val">3.0</td><td class="sum-val">1.6</td><td class="sum-notes-val">Veteran team</td></tr>
+<tr><td class="sum-team-val">18016</td><td class="sum-val">3.0</td><td class="sum-val">1.3</td><td class="sum-val podium">4.7 (1)</td><td class="sum-val">0.6</td><td class="sum-val">2.6</td><td class="sum-val">0.2</td><td class="sum-val">1.6</td><td class="sum-val">0.9</td><td class="sum-val">2.2</td><td class="sum-val">2.1</td><td class="sum-val">2.4</td><td class="sum-val">1.9</td><td class="sum-val">3.0</td><td class="sum-val">1.6</td><td class="sum-notes-val">Late check-in</td></tr>
 
         </tbody>
       </table>
@@ -141,9 +145,9 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </thead>
         <tbody>
           <tr><td class="sum-team-val">18662</td><td class="sum-val">3.2</td><td class="sum-val">2.8</td><td class="sum-val">1.5</td><td class="sum-val">1.7</td><td class="sum-val">2.1</td><td class="sum-val">1.9</td><td class="sum-val">0.6</td><td class="sum-val">0.5</td><td class="sum-val">3.6</td><td class="sum-val">1.8</td><td class="sum-val">2.2</td><td class="sum-val">1.4</td><td class="sum-val">1.9</td><td class="sum-val">1.1</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">18696</td><td class="sum-val">3.2</td><td class="sum-val">1.9</td><td class="sum-val">3.5</td><td class="sum-val">1.7</td><td class="sum-val">2.6</td><td class="sum-val">1.4</td><td class="sum-val">2.2</td><td class="sum-val">0.9</td><td class="sum-val">0.8</td><td class="sum-val">1.2</td><td class="sum-val">3.6</td><td class="sum-val">1.8</td><td class="sum-val">2.4</td><td class="sum-val">1.7</td><td class="sum-notes-val"></td></tr>
-<tr><td class="sum-team-val">18824</td><td class="sum-val">4.3</td><td class="sum-val">0.8</td><td class="sum-val">3.5</td><td class="sum-val">1.7</td><td class="sum-val">3.1</td><td class="sum-val">1.4</td><td class="sum-val">2.4</td><td class="sum-val">2.2</td><td class="sum-val">1.9</td><td class="sum-val">1.8</td><td class="sum-val">2.4</td><td class="sum-val">2.2</td><td class="sum-val">2.7</td><td class="sum-val">1.4</td><td class="sum-notes-val">Rookie Team</td></tr>
-<tr><td class="sum-team-val">19288</td><td class="sum-val">2.0</td><td class="sum-val">1.3</td><td class="sum-val">4.0</td><td class="sum-val">0.9</td><td class="sum-val">1.4</td><td class="sum-val">2.4</td><td class="sum-val">1.6</td><td class="sum-val">0.9</td><td class="sum-val">1.2</td><td class="sum-val">0.3</td><td class="sum-val">2.1</td><td class="sum-val">1.4</td><td class="sum-val">2.1</td><td class="sum-val">1.2</td><td class="sum-notes-val">Veteran team</td></tr>
+<tr><td class="sum-team-val">18696</td><td class="sum-val">3.2</td><td class="sum-val">1.9</td><td class="sum-val">3.5</td><td class="sum-val">1.7</td><td class="sum-val">2.6</td><td class="sum-val">1.4</td><td class="sum-val">2.2</td><td class="sum-val">0.9</td><td class="sum-val">0.8</td><td class="sum-val">1.2</td><td class="sum-val podium">3.6 (2)</td><td class="sum-val">1.8</td><td class="sum-val">2.4</td><td class="sum-val">1.7</td><td class="sum-notes-val"></td></tr>
+<tr><td class="sum-team-val">18824</td><td class="sum-val podium">4.3 (1)</td><td class="sum-val">0.8</td><td class="sum-val">3.5</td><td class="sum-val">1.7</td><td class="sum-val">3.1</td><td class="sum-val">1.4</td><td class="sum-val">2.4</td><td class="sum-val">2.2</td><td class="sum-val">1.9</td><td class="sum-val">1.8</td><td class="sum-val">2.4</td><td class="sum-val">2.2</td><td class="sum-val">2.7</td><td class="sum-val">1.4</td><td class="sum-notes-val">Rookie Team</td></tr>
+<tr><td class="sum-team-val">19288</td><td class="sum-val">2.0</td><td class="sum-val">1.3</td><td class="sum-val podium">4.0 (2)</td><td class="sum-val">0.9</td><td class="sum-val">1.4</td><td class="sum-val">2.4</td><td class="sum-val">1.6</td><td class="sum-val">0.9</td><td class="sum-val">1.2</td><td class="sum-val">0.3</td><td class="sum-val">2.1</td><td class="sum-val">1.4</td><td class="sum-val">2.1</td><td class="sum-val">1.2</td><td class="sum-notes-val">Veteran team</td></tr>
 
         </tbody>
       </table>
@@ -286,7 +290,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #11359 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -414,7 +418,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #11359 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -553,7 +557,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #11418 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -681,7 +685,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #11418 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -820,7 +824,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #11438 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -948,7 +952,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #11438 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -1087,7 +1091,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #11471 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -1215,7 +1219,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #11471 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -1354,7 +1358,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #12183 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -1482,7 +1486,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #12183 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -1621,7 +1625,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #12494 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -1749,7 +1753,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #12494 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -1888,7 +1892,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #12929 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -2016,7 +2020,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       <div class="notes"><strong>Notes:</strong> No portfolio</div>
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #12929 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -2155,7 +2159,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #12932 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -2283,7 +2287,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #12932 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -2422,7 +2426,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13268 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -2550,7 +2554,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13268 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -2689,7 +2693,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13278 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -2817,7 +2821,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13278 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -2956,7 +2960,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13483 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -3084,7 +3088,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13483 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -3223,7 +3227,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13550 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -3351,7 +3355,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13550 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -3490,7 +3494,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13772 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -3618,7 +3622,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #13772 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -3757,7 +3761,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #14070 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -3885,7 +3889,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #14070 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -4024,7 +4028,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #14114 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -4152,7 +4156,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       <div class="notes"><strong>Notes:</strong> Veteran team</div>
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #14114 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -4291,7 +4295,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #15183 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -4419,7 +4423,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #15183 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -4558,7 +4562,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #15551 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -4686,7 +4690,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       <div class="notes"><strong>Notes:</strong> No portfolio</div>
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #15551 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -4825,7 +4829,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16127 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -4953,7 +4957,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16127 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -5092,7 +5096,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16238 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -5220,7 +5224,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16238 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -5359,7 +5363,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16276 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -5487,7 +5491,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16276 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -5626,7 +5630,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16358 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -5754,7 +5758,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16358 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -5893,7 +5897,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16618 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -6021,7 +6025,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       <div class="notes"><strong>Notes:</strong> Veteran team</div>
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16618 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -6160,7 +6164,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16908 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -6288,7 +6292,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #16908 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -6427,7 +6431,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #17560 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -6555,7 +6559,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #17560 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -6694,7 +6698,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #17684 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -6822,7 +6826,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       <div class="notes"><strong>Notes:</strong> Veteran team</div>
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #17684 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -6961,7 +6965,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #18016 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -7089,7 +7093,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       <div class="notes"><strong>Notes:</strong> Late check-in</div>
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #18016 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -7228,7 +7232,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #18662 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -7356,7 +7360,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #18662 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -7495,7 +7499,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #18696 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -7623,7 +7627,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #18696 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -7762,7 +7766,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #18824 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -7890,7 +7894,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       <div class="notes"><strong>Notes:</strong> Rookie Team</div>
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #18824 Feedback sheet (2/2)</div>
     </div>
 
     <div class="page">
@@ -8029,7 +8033,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #19288 Feedback sheet (1/2)</div>
     </div>
     <div class="page">
       <div class="header">
@@ -8157,7 +8161,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
         </table>
       </div>
       <div class="notes"><strong>Notes:</strong> Veteran team</div>
-      <div class="footer">FTC DECODE 2025-26 — Scores out of 5</div>
+      <div class="footer">FTC DECODE 2025-26 — Scores out of 5 — #19288 Feedback sheet (2/2)</div>
     </div>
 </body>
 </html>

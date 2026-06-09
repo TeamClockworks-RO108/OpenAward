@@ -16,7 +16,7 @@ PAGE_CONTENT_H = 260  # usable height inside a page (A4 minus top/bottom padding
 HEADER_H = 32         # team header block (title + team-id + QR + border + margin)
 CAT_HEADER_H = 12     # award header bar + bottom margin
 TABLE_HEAD_H = 6      # criteria table header row
-CRIT_ROW_H = 10       # one criterion row (with wrapping buffer)
+CRIT_ROW_H = 8        # one criterion row (with wrapping buffer)
 CAT_BOTTOM_H = 3      # criteria table bottom margin
 NOTES_H = 16          # notes block
 
@@ -43,6 +43,34 @@ def stddev(scores):
         return 0.0
     m = mean(scores)
     return math.sqrt(sum((x - m) ** 2 for x in scores) / (n - 1))
+
+
+def compute_rankings(teams, config):
+    """Compute top-3 rankings per award.
+
+    Returns dict: {award_name: {team_id: place}} where place is 1, 2, or 3.
+    Ties share the same place; the next place is skipped accordingly.
+    """
+    rankings = {}
+    for award_name in config["awards"]:
+        team_avgs = []
+        for team, scores_by_award, _notes in teams:
+            avg = mean(scores_by_award[award_name])
+            team_avgs.append((team, avg))
+        team_avgs.sort(key=lambda x: x[1], reverse=True)
+
+        award_ranks = {}
+        prev_avg = None
+        place = 0
+        for i, (team, avg) in enumerate(team_avgs):
+            if avg != prev_avg:
+                place = i + 1
+            if place > 3:
+                break
+            award_ranks[team] = place
+            prev_avg = avg
+        rankings[award_name] = award_ranks
+    return rankings
 
 
 def estimate_category_height(criteria_count):
@@ -88,11 +116,16 @@ def score_bar(score, max_score):
     return f"""<div class="bar-bg"><div class="bar-fill" style="width:{pct:.0f}%;background:{shade}"></div></div>"""
 
 
-def render_category(award_name, criteria_defs, scores, max_score, cat_index):
+def render_category(award_name, criteria_defs, scores, max_score, cat_index,
+                    placement=None):
     avg = mean(scores)
     sd = stddev(scores)
     cat_classes = ["control", "design", "innovate"]
     cls = cat_classes[cat_index % len(cat_classes)]
+
+    placement_html = ""
+    if placement:
+        placement_html = f' <span class="podium-badge">#{placement}</span>'
 
     rows = ""
     for i, (crit, score) in enumerate(zip(criteria_defs, scores)):
@@ -109,7 +142,7 @@ def render_category(award_name, criteria_defs, scores, max_score, cat_index):
 
     return f"""
       <div class="category">
-        <div class="cat-header {cls}">{award_name} Award
+        <div class="cat-header {cls}">{award_name} Award{placement_html}
           <span class="stats">Avg: {avg:.2f} &nbsp;|&nbsp; StdDev: {sd:.2f}</span>
         </div>
         <table class="criteria-table">
@@ -120,7 +153,7 @@ def render_category(award_name, criteria_defs, scores, max_score, cat_index):
       </div>"""
 
 
-def render_summary(teams_data, config, qr_svg):
+def render_summary(teams_data, config, qr_svg, rankings):
     """Render summary pages, splitting at SUMMARY_PAGE_SIZE teams each."""
     title = config.get("title", "SPL")
     max_score = config["max_score"]
@@ -149,7 +182,12 @@ def render_summary(teams_data, config, qr_svg):
                 scores = scores_by_award[name]
                 avg = mean(scores)
                 sd = stddev(scores)
-                row += f'<td class="sum-val">{avg:.1f}</td><td class="sum-val">{sd:.1f}</td>'
+                place = rankings.get(name, {}).get(team)
+                if place:
+                    row += f'<td class="sum-val podium">{avg:.1f} ({place})</td>'
+                else:
+                    row += f'<td class="sum-val">{avg:.1f}</td>'
+                row += f'<td class="sum-val">{sd:.1f}</td>'
             notes_esc = notes if notes else ""
             row += f'<td class="sum-notes-val">{notes_esc}</td>'
             body += f"<tr>{row}</tr>\n"
@@ -180,7 +218,7 @@ def render_summary(teams_data, config, qr_svg):
     return pages
 
 
-def render_team(team, scores_by_award, notes, config, qr_svg):
+def render_team(team, scores_by_award, notes, config, qr_svg, rankings):
     max_score = config["max_score"]
     title = config.get("title", "SPL")
     award_names = list(config["awards"].keys())
@@ -195,7 +233,7 @@ def render_team(team, scores_by_award, notes, config, qr_svg):
             criteria_defs = config["awards"][award_name]
             scores = scores_by_award[award_name]
             categories_html += render_category(
-                award_name, criteria_defs, scores, max_score, cat_index
+                award_name, criteria_defs, scores, max_score, cat_index,
             )
 
         notes_html = ""
@@ -213,7 +251,7 @@ def render_team(team, scores_by_award, notes, config, qr_svg):
       </div>
       {categories_html}
       {notes_html}
-      <div class="footer">{title} — Scores out of {max_score}</div>
+      <div class="footer">{title} — Scores out of {max_score} — #{team} Feedback sheet{f" ({page_idx+1}/{len(award_pages)})" if len(award_pages) > 1 else ""}</div>
     </div>"""
 
     return pages_html
@@ -264,6 +302,10 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
 .badge.required { background: #111; color: #fff; }
 .badge.encouraged { background: #fff; color: #333; border: 1pt solid #888; }
 
+/* Podium highlights (top 3 per award) */
+.podium { background: #111; color: #fff; font-weight: 700; }
+.podium-badge { background: #111; color: #fff; font-size: 8pt; padding: 0.5mm 2.5mm; border-radius: 2px; margin-left: 2mm; vertical-align: middle; font-weight: 700; }
+
 .notes { margin: 4mm 0; padding: 3mm 4mm; background: #f5f5f5; border-left: 3pt solid #333; font-size: 9.5pt; color: #222; }
 
 .footer { position: absolute; bottom: 8mm; left: 0; width: 100%; text-align: center; font-size: 8pt; color: #999; }
@@ -285,7 +327,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: #ddd; color: #111
   .page { box-shadow: none; margin: 0; }
   @page { size: A4; margin: 0; }
   .bar-fill, .cat-header, .badge, .bar-bg, .summary-table thead,
-  .summary-table tbody tr:nth-child(even) {
+  .summary-table tbody tr:nth-child(even), .podium, .podium-badge {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -330,9 +372,11 @@ def main():
                 ]
             teams.append((team, scores_by_award, notes))
 
-    summary = render_summary(teams, config, qr_svg)
+    rankings = compute_rankings(teams, config)
+
+    summary = render_summary(teams, config, qr_svg, rankings)
     team_pages = "\n".join(
-        render_team(team, scores, notes, config, qr_svg)
+        render_team(team, scores, notes, config, qr_svg, rankings)
         for team, scores, notes in teams
     )
     pages = summary + "\n" + team_pages
