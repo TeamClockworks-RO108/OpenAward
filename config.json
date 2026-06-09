@@ -1,0 +1,32 @@
+{
+  "title": "SPL 2026",
+  "max_score": 5,
+  "qr_url": "https://wiki.teamclockworks.ro/en/spl-rules",
+  "qr_label": "Scan for full\ncriteria descriptions",
+  "awards": {
+    "Control": [
+      { "name": "Software overview", "required": true },
+      { "name": "Sensor input", "required": true },
+      { "name": "Clear control techniques", "required": true },
+      { "name": "Advanced algorithms", "required": false },
+      { "name": "Robustness", "required": false }
+    ],
+    "Design": [
+      { "name": "Elegance, efficiency, and maintainability", "required": true },
+      { "name": "Intentional design process", "required": true },
+      { "name": "Clear design principles", "required": true },
+      { "name": "Trade-off awareness", "required": true },
+      { "name": "Considered inspiration", "required": false },
+      { "name": "Aesthetic identity", "required": false }
+    ],
+    "Innovate": [
+      { "name": "Clear innovation identified", "required": true },
+      { "name": "Documented process", "required": true },
+      { "name": "Measurable impact", "required": true },
+      { "name": "Problem-first thinking", "required": false },
+      { "name": "Iteration evidence", "required": false },
+      { "name": "Considered trade-offs", "required": false },
+      { "name": "Transferability", "required": false }
+    ]
+  }
+}

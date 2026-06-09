@@ -1,0 +1,50 @@
+{
+  "title": "FTC DECODE 2025-26",
+  "max_score": 5,
+  "qr_url": "https://gm0.org/en/latest/docs/awards/award-types.html",
+  "qr_label": "Full criteria\non gm0.org",
+  "awards": {
+    "Think": [
+      { "name": "Portfolio with engineering content", "required": true },
+      { "name": "Team resources and development plan", "required": false },
+      { "name": "Organized and clear presentation", "required": false }
+    ],
+    "Connect": [
+      { "name": "Team plan for skill development", "required": true },
+      { "name": "STEM community connections", "required": false },
+      { "name": "Active engineering community engagement", "required": false }
+    ],
+    "Reach": [
+      { "name": "Outreach objectives supporting FIRST", "required": true },
+      { "name": "Recruitment of new teams/coaches/mentors", "required": true },
+      { "name": "Ambassador for FIRST programs", "required": false },
+      { "name": "Creative outreach materials", "required": false }
+    ],
+    "Sustain": [
+      { "name": "Sustainability and planning", "required": true },
+      { "name": "Progress tracking towards plans", "required": true },
+      { "name": "Clear team roles and leadership", "required": false },
+      { "name": "Constraint and risk management", "required": false }
+    ],
+    "Innovate": [
+      { "name": "Engineering content for design solution", "required": true },
+      { "name": "Creative/unique robot or mechanism", "required": true },
+      { "name": "Stable, robust, contributes to objectives", "required": true },
+      { "name": "Risk mitigation", "required": false }
+    ],
+    "Control": [
+      { "name": "Portfolio with control components", "required": true },
+      { "name": "External feedback and control solutions", "required": true },
+      { "name": "Consistent performance during matches", "required": false },
+      { "name": "Reliability and improvement discussion", "required": false },
+      { "name": "Engineering process for control solutions", "required": false }
+    ],
+    "Design": [
+      { "name": "Elegant, efficient, and maintainable", "required": true },
+      { "name": "Entire machine design worthy of recognition", "required": true },
+      { "name": "Distinguished by aesthetics and function", "required": false },
+      { "name": "Well-considered design basis", "required": false },
+      { "name": "Effective and consistent with game plan", "required": false }
+    ]
+  }
+}
