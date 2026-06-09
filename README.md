@@ -13,26 +13,13 @@ Everything is optimized for **grayscale A4 printing** with `print-color-adjust: 
 
 ## Examples
 
-### SPL 2026 (3 awards, 18 criteria)
+| ![SPL Team Feedback](docs/spl_team.png) | ![FIRST Scoring Overview](docs/first_overview.png) |
+| :--: | :--: |
+| SPL 2026 — Team feedback sheet (3 awards, single page) | FTC DECODE 2025-26 — Scoring overview (7 awards, 30 teams) |
 
-**Scoring overview** — top-3 placements highlighted per award:
-
-![SPL Scoring Overview](docs/spl_overview.png)
-
-**Team feedback sheet** — all awards fit on one page:
-
-![SPL Team Feedback](docs/spl_team.png)
-
-### FIRST FTC DECODE 2025-26 (7 awards, 28 criteria)
-
-**Scoring overview** — 30 teams, paginated at 26 per page:
-
-![FIRST Scoring Overview](docs/first_overview.png)
-
-**Team feedback sheet** — auto-paginated across two pages:
-
-![FIRST Team Feedback Page 1](docs/first_team_p1.png)
-![FIRST Team Feedback Page 2](docs/first_team_p2.png)
+| ![FIRST Team Feedback Page 1](docs/first_team_p1.png) | ![FIRST Team Feedback Page 2](docs/first_team_p2.png) |
+| :--: | :--: |
+| FTC DECODE 2025-26 — Team feedback sheet (page 1/2) | FTC DECODE 2025-26 — Team feedback sheet (page 2/2) |
 
 ## Quick start
 
@@ -119,4 +106,4 @@ This renders the HTML in headless Chromium and saves specific pages as PNGs in `
 
 ## License
 
-MIT
+This project is licensed under the [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html) (AGPL-3.0).
